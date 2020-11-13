@@ -1,10 +1,11 @@
 # Travaux pratiques
+***
 ## Règles
 * Les exercices d'une série peuvent être fait dans le désordre mais sous-parties d'exercices doivent être fait dans l'ordre indiqué
 * Vous devez écrire le test correspondant à l'énoncé avant d'écrire du code.
 * Un exercice n'est considéré réussi que si toutes les assertions composant le test fonctionnent simultanément.
-
-## Série 1
+***
+# Série 1 - Exercices supplémentaires
 ## Exercice 1
 Soit un tableau d'entiers, retourner la somme des carrés de ces entiers :
 ```
@@ -41,14 +42,14 @@ S'il y a égalité entre deux nombres positifs, prenez le premier index.
 ## Exercice 4
 Ecrire le code pour calculer le n-ième élément de la suite de Fibonacci.  
 Pour rappel, la suite de Fibonacci est défini comme telle :  
+f(0) = 0  
+f(1) = 1  
+f(n) = f(n-1) + f(n-2)   
 ```
-f(0) = 0
-f(1) = 1
-f(n) = f(n-1) + f(n-2) 
-e.g : f(2) = f(0)+f(1) = 1
-e.g : f(3) = f(1)+f(2) = 2
-e.g : f(10) = f(9)+f(8) = 55
-e.g : f(16) = 987
+f(2) = f(0)+f(1) = 1
+f(3) = f(1)+f(2) = 2
+f(10) = f(9)+f(8) = 55
+f(16) = 987
 ```
 Essayez de calculer f(80), que constatez-vous ?  
 A votre avis, pourquoi ?  
@@ -115,8 +116,7 @@ Votre but est de trouver le plus grand chiffre possible après avoir inséré K 
 '2020',1 = 202
 ```
 
-#Série 2
-## Exercice 1
+## Exercice 11
 Le but ici est de modéliser le rendu-monnaie d'une machine à café. Une machine possède trois attributs à sa création : Un nombre de pièces de 10ct, un nombre de pièces de 20ct, et un nombre de pièces de 50ct.  
 On cherche simplement à savoir si le rendu est possible. Il n'est pas nécessaire de trouver le rendu optimal. 
 ```
@@ -129,22 +129,27 @@ new MachineACafe(0,2,5).peutRendre(80) -> false
 new MachineACafe(1,1,1).peutRendre(55) -> false
 ```
 
-#Série 3
+***
+
+# Série 2 - Enigme des 8 dames
 Aux échecs, le plateau standard est de taille 8x8 et une dame peut se déplacer (et capturer) n'importe quelle pièce présente sur une même une ligne, colonne, ou diagonale. 
 Le but de cet exercice est de trouver les solutions à une énigme célèbre : Peut-on placer 8 dames sur un échiquier sans qu'aucune ne puisse en capturer une autre ?  
 En dérivent plusieurs questions : Combien existe-t-il de solutions? Cette énigme est-elle également valable pour des plateaux d'autres tailles?  
 Tout au long de cette série, nous allons modéliser et essayer de répondre à ces différentes questions.   
 *Conseil : Travaillez avec un plateau de 4x4 pour commencer. Pensez à faire le nécessaire pour rendre cette taille variable en fonction d'un paramètre d'entrée.*  
-##Exercice 1 - Algorithme naïf
+
+## Exercice 1 - Algorithme naïf
 Cet exercice propose de modéliser un algorithme naïf. Cet algorithme n'est pas optimisé mais est une excellent exercice pour la manipulation de boucles et la réflexion algorithmique.  
 Le plateau est modélisé par un tableau de bouléens bidimentionnel (true s'il y a une dame sur la case, false sinon). 
 ````
 plateau[ligne][colonne]
 ````
+
 ### Exercice 1.1
 Pour éviter certains soucis de référencement mémoire, il est nécessaire d'avoir une méthode utilitaire permettant de copier un tableau :  
 * Contenu plateau == Contenu copie(plateau)
 * Référence mémoire plateau <> Référence mémoire copy(plateau) 
+
 ### Exercice 1.2
 Ecrire deux constructeurs : 
 * Le premier prend en entrée un nombre, qui sera la dimension du plateau
@@ -457,3 +462,131 @@ Placer 8 dames sur un plateau de 4x4 possède 92 solutions.
 ### Exercice 2.5 (bonus)
 Pour ceux qui ont effectué l'exercice 1, faites un comparatif de performances entre les deux algorithmes. L'algorithme de backtracking devrait être beaucoup plus rapide.  
 Prenez un peu de temps pour y réfléchir et essayez de comprendre pourquoi.
+
+***
+## Série 3 - 'The GAME'
+Le but de cet exercice est de développer le jeu ['The Game'](https://boardgamegeek.com/boardgame/173090/game) en ligne de commande dans son mode 1 joueur. 
+Le joueur interagira avec le programme via ligne de commande.  
+
+Matériel : 
+* 98 cartes, numérotées de 2 à 98
+
+Mise en place : 
+* Il y a 4 piles sur la table, DEUX piles ASCENDANTES commençant par 1, et DEUX piles DESCENDANTES commençant par 99
+* Le joueur reçoit 8 cartes
+
+```
+Exemple :
+Piles ascendantes : [01][01]
+Piles descendantes : [99][99]
+Main : [12][69][73][42][02][98][55][80]
+```
+
+But du jeu : 
+* Placer la totalité des cartes de sa main et de la pioche sur les 4 piles de la table
+
+Les règles sont les suivantes :
+* Lors de son tour, le joueur doit OBLIGATOIREMENT jouer : 
+    * DEUX cartes de sa main au MINIMUM s'il reste des cartes dans la pioche
+    * UNE carte de sa main au MINIMUM si la pioche est vide
+    * Il peut en jouer plus s'il le souhaite 
+    * S'il ne peut pas jouer de cartes, la partie est perdue
+* A la fin de son tour, le joueur pioche jusqu'à avoir 8 cartes de nouveau. Si la pioche est vide, il termine son tour sans piocher.
+* Sur le piles ascendantes, on ne peut placer de cartes que dans l'ordre croissant. On peut également y poser une carte plus petite si et seulement si la différence numérique entre les deux cartes vaut exactement 10 (et vice-versa sur les piles descendantes)
+```
+Exemple :
+Piles ascendantes : [01][01]
+Piles descendantes : [99][99]
+Main : [12][69][73][42][02][98][55][80]
+
+Julie joue le 98 sur une pile descendante :
+Piles ascendantes : [01][01]
+Piles descendantes : [99][98]
+Main : [12][69][73][42][02][55][80]
+
+Julie joue le 12 sur une pile ascendante :
+Piles ascendantes : [12][01]
+Piles descendantes : [99][98]
+Main : [69][73][42][02][55][80]
+
+Julie pourrait s'arrêter là mais elle décide de continuer.
+
+Julie joue le 02 sur le 12. Elle a le droit malgré le fait que ce soit une pile ascendante car la différence est de 10 exactement :
+Piles ascendantes : [02][01]
+Piles descendantes : [99][98]
+Main : [69][73][42][55][80]
+
+Puis, Julie termine son tour, elle pioche jusque avoir 8 cartes en main.
+```
+
+Fin de partie :
+* Une partie est gagnée si le joueur a placé toutes les cartes de sa main et que la pioche est vide
+* Une partie est perdue si un joueur ne peu plus poser de cartes
+
+## Exercice 1 
+Faites la modélisation du problème et gardez en tête le principe de base de la modélisation objet : un objet ne doit avoir qu'une seule responsabilité.  
+Posez-vous également la question : Si vous deviez implémenter n'importe quel autre jeu de cartes, quelle partie de votre code pourriez-vous réutiliser ?  
+Pensez également à utiliser des structures telles que des énumérations.  
+Effectuez la modélisation sur papier avant de vous attaquer à la suite des exercices. Une fois les exercices terminés, comparez votre modélisation avec celle proposée.
+
+## Exercice 2
+Créez une classe Carte. La classe carte n'a qu'un seul attribut qui est son numéro, un getter et une méthode toString lui donnant une représentationgraphique de la forme `[03]`
+
+## Exercice 3
+Créez une classe Deck. Elle possède : 
+* Une collection de Cartes (attardez-vous sur le choix de la collection ici)
+* Une méthode d'initialisation
+* Une méthode permettant de savoir s'il reste des cartes dans la pioche
+* Une méthode permettant de piocher (enlever la première carte de la collection et la renvoyer)
+* Une méthode toString renvoyant la représentation suivante `Deck : [[[42]` (42 étant le nombre de cartes restantes)
+* Une méthode de mélange 
+Le mélange d'une collection est un excellent exercice algorithmique. Pour les plus téméraires d'entre vous, n'hésitez pas à implémenter la méthode vous-mêmes.
+Pour les autre, pensez-y au moins quelques minutes, et utilisez la méthode présente dans le JDK `Collections.shuffle(List l)`.
+
+## Exercice 4
+Créez une classe Player. Un joueur possède :
+* Un nom (qu'on demandera au début de la partie) 
+* Une main (une collection de cartes). Là aussi, pensez à la collection à utiliser et un getter associé
+* Une méthode permettant de recevoir une carte (et de l'ajouter à sa main)
+* Une méthode retournant permettant de recherche et de retourner un carte de la main du joueur en fonction d'un entier passé en paramètre. Si un joueur ne possède pas la carte demandée, cela lève une UnavailableCardException (qu'il faudra créer).
+* Une méthode permettant de jouer une carte (l'enlever de sa main et la retourner). Si un joueur ne possède pas la carte demandée, cela lève une UnavailableCardException.
+* Une méthode toString
+
+## Exercice 5
+Créez un objet Stack (représentant les piles de cartes sur la table). Une Stack possède :
+* Un attribut concernant l'ordre (ascendant ou descendant)
+* La dernière carte ayant été jouée sur la pile
+* Une méthode permettant de mettre une carte sur le haut de la pile
+* Une méthode toString
+
+## Exercice 6
+Créez un objet Table. Une table possède :
+* Une collection de 4 Stacks et un getter associé
+* Une méthode permettant de jouer une carte sur un numéro de Stack (pensez à vérifier qu'il est possible de jouer cette carte et que ne numéro de la stack existe). Si ce n'est pas possible, créez et renvoyez les exceptions suivantes : NotAValidStackException, NotAValidPlayExceptio.
+* Une méthode toString
+
+## Exercice 7
+Il ne reste plus qu'à créer l'objet Game, qui coordonne l'ensemble de tous les objets que nous avons créé jusqu'à maintenant. 
+
+### Exercice 7.1
+L'objet Game possède les attributs suivants : 
+* Un joueur
+* Une table
+* Un deck
+Le constructeur nous servira à faire la mise en place : 
+* Création et mélange d'un deck
+* Création d'une table 
+* Création d'un joueur
+Pour communiquer avec le joueur à travers l'invit de commadne, on utilisera la méthode suivante : 
+```java
+Scanner sc = new Scanner(System.in); 
+sc.next(); //C'est cette instruction qui laisse la main à l'utilisateur
+```
+
+### Exercice 7.2
+Le déroulé du jeu se fait de la manière suivante : Tant que le jeu n'est pas terminé, un joueur joue son tour, puis pioche pour re-remplir sa main.
+A vous ensuite d'implémenter les différentes méthodes pour permettre le bon déroulé du jeu.  
+*Conseils : Faites de TOUTES PETITES méthodes et n'hésitez pas à découper votre logique. Cela permet de donner une définition à un bloc d'instructions au travers d'un nom de méthode ou de variable. A titre indicatif, la classe Game du corrigé contient 18 méthodes, et certaines d'entre elles font une à deux lignes.*
+
+### Exercice 7.3
+Détendez-vous et faites quelques parties, vous l'avez bien mérité ;)

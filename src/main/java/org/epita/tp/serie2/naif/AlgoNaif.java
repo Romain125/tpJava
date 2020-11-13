@@ -1,18 +1,18 @@
-package org.epita.tp;
+package org.epita.tp.serie2.naif;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Serie3_1 {
+public class AlgoNaif {
 
     private /*final*/ int taillePlateau;
     private /*final*/ boolean[][] plateau;
 
-    public Serie3_1(int taillePlateau) {
+    public AlgoNaif(int taillePlateau) {
     }
 
-    public Serie3_1(boolean[][] plateau) {
+    public AlgoNaif(boolean[][] plateau) {
     }
 
     public boolean[][] getPlateau() {

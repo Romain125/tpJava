@@ -1,10 +1,10 @@
-package org.epita.tp;
+package org.epita.tp.serie1;
 
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestsSerie1 {
+public class TestsExercicesSupplementaires {
 
     @Test
     public void exercice1(){

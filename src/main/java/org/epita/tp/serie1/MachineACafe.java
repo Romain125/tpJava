@@ -1,13 +1,12 @@
-package org.epita.tp;
+package org.epita.tp.serie1;
 
-//Ceci est une machine à café
-public class Serie2 {
+public class MachineACafe {
 
     int pieces10;
     int pieces20;
     int pieces50;
 
-    public Serie2(int pieces10, int pieces20, int pieces50) {
+    public MachineACafe(int pieces10, int pieces20, int pieces50) {
         this.pieces10 = pieces10;
         this.pieces20 = pieces20;
         this.pieces50 = pieces50;

@@ -1,18 +1,18 @@
-package org.epita.tp;
+package org.epita.tp.serie2.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Serie3_2 {
+public class AlgoBackTracking {
 
     private List<String> arrayList = new ArrayList<>();
     private /* final */ int dimensionPlateau;
 
-    public Serie3_2(int dimensionPlateau) {
+    public AlgoBackTracking(int dimensionPlateau) {
 
     }
 
-    public Serie3_2(List<String> arrayList, int dimensionPlateau) {
+    public AlgoBackTracking(List<String> arrayList, int dimensionPlateau) {
 
     }
 
@@ -39,11 +39,5 @@ public class Serie3_2 {
     public boolean verifierDiagonaleGauche(int diagonaleGauche) {
         return true;
     }
-
-}
-
-class Dame{
-    private int ligne;
-    private int colonne;
 
 }

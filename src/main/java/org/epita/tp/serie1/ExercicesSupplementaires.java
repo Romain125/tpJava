@@ -1,6 +1,6 @@
-package org.epita.tp;
+package org.epita.tp.serie1;
 
-public class Serie1 {
+public class ExercicesSupplementaires {
 
     public long exercice1(long[] entiers){
         return 0;

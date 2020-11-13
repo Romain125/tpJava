@@ -1,9 +1,9 @@
-package org.epita.tp;
+package org.epita.tp.serie2;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-public class TestsSerie3 {
+public class TestsAlgoBackTracking {
 
     @Test
     public void exercice1_1(){
@@ -64,51 +64,6 @@ public class TestsSerie3 {
     @Test
     @Disabled("Pas de tests ici, juste des optimisation qui ne devraient pas faire tomber en erreur les tests précédents")
     public void exercice1_11(){
-    }
-
-    @Test
-    public void exercice2_1_1(){
-        //Copie
-    }
-
-    @Test
-    public void exercice2_1_2(){
-        //Affichage
-    }
-
-    @Test
-    public void exercice2_2_1(){
-        //Ligne
-    }
-
-    @Test
-    public void exercice2_2_2(){
-        //Colonne
-    }
-
-    @Test
-    public void exercice2_2_3(){
-        //Diagonale gauche
-    }
-
-    @Test
-    public void exercice2_2_4(){
-        //Diagonale droite
-    }
-
-    @Test
-    public void exercice2_3(){
-
-    }
-
-    @Test
-    public void exercice2_4(){
-
-    }
-
-    @Test
-    public void exercice2_5(){
-
     }
 
 }
