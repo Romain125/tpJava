@@ -7,36 +7,49 @@
 ## Série 1
 ## Exercice 1
 Soit un tableau d'entiers, retourner la somme des carrés de ces entiers :
-* [1,2,3] = 1²+2²+3² = 14
-* [14,9,-9,1,4,3] -> 384
+```
+[1,2,3] = 1²+2²+3² = 14
+[14,9,-9,1,4,3] -> 384
+```
 Un tableau vide doit renvoyer -1
-* [] -> -1
-
+```
+[] -> -1
+```
 ## Exercice 2
 Ecrire une méthode qui permet de calculer la moyenne d'un tableau de décimaux. La moyenne doit être un entier arrondi à l'inférieur.
 Un tableau vide doit renvoyer une exception.
-* [10, 20] -> (10+20)/2 = 15
-* [11,12,13,14,15, 16] -> 13
-* [] -> Exception
+```
+[10, 20] -> (10+20)/2 = 15
+[11,12,13,14,15, 16] -> 13
+[] -> Exception
+```
 
 ## Exercice 3
 Soit un tableau d'entiers relatifs, trouvez l'index de l'élément le plus éloigné de zéro.   
-* [1,-2,10,-15,3] -> 3 (car c'est l'index de -15, l'entier le plus éloigné de 0) 
+```
+[1,-2,10,-15,3] -> 3 (car c'est l'index de -15, l'entier le plus éloigné de 0) 
+```
 S'il y a égalité, entre deux nombres, l'un positif, le second négatif, prenez le positif.   
-* [-10,10,3,-5] -> 1
+```
+[-10,10,3,-5] -> 1
+```
 S'il y a égalité entre deux nombres positifs, prenez le premier index.
-* [-10,10,3,10] -> 1
+```
+[-10,10,3,10] -> 1
+```
 
 ## Exercice 4
 Ecrire le code pour calculer le n-ième élément de la suite de Fibonacci.  
 Pour rappel, la suite de Fibonacci est défini comme telle :  
-* f(0) = 0
-* f(1) = 1
-* f(n) = f(n-1) + f(n-2) 
-* e.g : f(2) = f(0)+f(1) = 1
-* e.g : f(3) = f(1)+f(2) = 2
-* e.g : f(10) = f(9)+f(8) = 55
-* e.g : f(16) = 987
+```
+f(0) = 0
+f(1) = 1
+f(n) = f(n-1) + f(n-2) 
+e.g : f(2) = f(0)+f(1) = 1
+e.g : f(3) = f(1)+f(2) = 2
+e.g : f(10) = f(9)+f(8) = 55
+e.g : f(16) = 987
+```
 Essayez de calculer f(80), que constatez-vous ?  
 A votre avis, pourquoi ?  
 Essayez de trouver une optimisation afin de faire tourner f(80) dans un délai correct.
@@ -47,60 +60,74 @@ Jessica-Marie-Sue-Hellen est une femme...difficile. Elle n'accepte de sortir qu'
 * Physique : Au minimum 8/10
 * Revenus annuels : Au minimum 50 000€/an, mais si c'est au delà de 1 000 000€/an, on oublie le reste des critères !
 Ecrire une méthode permettant de modéliser la chance d'un homme à sortir avec Jessica-Marie-Sue-Helen
-* e.g : 21, 9, 60000 -> true
-* e.g : 21, 7, 90000 -> false
-* e.g : 90, 2, 2000000 -> true
+```
+21, 9, 60000 -> true
+21, 7, 90000 -> false
+90, 2, 2000000 -> true
+```
 
 ## Exercice 6
 En général, lorsque vous payer, vous recevez un ticket de carte bleue avec le numéro de votre carte masquée. Seuls restent les 4 derniers numéros, le reste étant remplacé par des #.  
 Le but de cet exercice est d'écrire une méthode permettant de remplacer tous les caractères d'une chaîne de caractère par des # (sauf les 4 derniers).  
-* 123456789012 -> ########9012
-* 1234 5678 9012 -> ##########9012
-* MomNomEstPersonne -> #############onne
-* 42 -> 42
+```
+123456789012 -> ########9012
+1234 5678 9012 -> ##########9012
+MomNomEstPersonne -> #############onne
+42 -> 42
+```
 
 ## Exercice 7 
 Le but est de prendre un texte et de la convertir soit :  
 - Tout en majuscules si le texte comprend une majorité de majuscules.  
 - Tout en minuscules si le texte comprend une majorité de minuscules.  
 - En cas d'égalité, on ne convertira rien !  
-* "Toto" -> "toto"
-* "TITi" -> "TITI"
-* "taTA" -> "taTA"
+```
+"Toto" -> "toto"
+"TITi" -> "TITI"
+"taTA" -> "taTA"
+```
 
 ## Exercice 8
 Soit un tableau d'entiers relatifs. Trouvez le maximum de la multiplication de deux entiers adjacents.
-* [1, 2, 3] -> 6
-* [9, 5, 10, 2, 24, -1, -48] -> 50
-* [-23, 4, -5, 99, -27, 329, -2, 7, -921] -> -14
+```
+[1, 2, 3] -> 6
+[9, 5, 10, 2, 24, -1, -48] -> 50
+[-23, 4, -5, 99, -27, 329, -2, 7, -921] -> -14
+```
 Le cas du tableau vide n'est pas à prendre en compte.
 
 ## Exercice 9
 Soit un tableau d'entiers positifs compris entre 0 et 9, trouvez chiffre minimum résultat de la combinaison des numéros du tableau. Les doublons sont à ignorer.  
-* [1, 3, 1] -> 13
-* [5, 7, 5, 9, 7] -> 579
-* [9, 1, 3, 1, 7, 4, 6, 6, 7] -> 134679
+```
+[1, 3, 1] -> 13
+[5, 7, 5, 9, 7] -> 579
+[9, 1, 3, 1, 7, 4, 6, 6, 7] -> 134679
+```
 
 ## Exercice 10
 Attention, celui-ci n'est pas évident !  
 Soit une chaîne de caractère représentant un nombre et un nombre n de virgules.
 Votre but est de trouver le plus grand chiffre possible après avoir inséré K virgules dans cette chaîne de caractères. Il ne peut pas y avoir deux virgules à la suite.
-* '1234',1 = 234 car c'est le max de ('1','234'), ('12','34') et ('123','4').
-* '1234',2 = 34 car c'est le max de ('1','2','34'), ('1','23','4') et ('12','3','4'). 
-* '1234',3 = 4
-* '2020',1 = 202
+```
+'1234',1 = 234 car c'est le max de ('1','234'), ('12','34') et ('123','4').
+'1234',2 = 34 car c'est le max de ('1','2','34'), ('1','23','4') et ('12','3','4'). 
+'1234',3 = 4
+'2020',1 = 202
+```
 
 #Série 2
 ## Exercice 1
 Le but ici est de modéliser le rendu-monnaie d'une machine à café. Une machine possède trois attributs à sa création : Un nombre de pièces de 10ct, un nombre de pièces de 20ct, et un nombre de pièces de 50ct.  
 On cherche simplement à savoir si le rendu est possible. Il n'est pas nécessaire de trouver le rendu optimal. 
-* new MachineACafe(0,0,0).peutRendre(50) -> false
-* new MachineACafe(2,2,2).peutRendre(200) -> false
-* new MachineACafe(1,2,2).peutRendre(10) -> true
-* new MachineACafe(1,2,2).peutRendre(80) -> true
-* new MachineACafe(1,2,2).peutRendre(90) -> true
-* new MachineACafe(0,2,5).peutRendre(80) -> false
-* new MachineACafe(1,1,1).peutRendre(55) -> false
+```
+new MachineACafe(0,0,0).peutRendre(50) -> false
+new MachineACafe(2,2,2).peutRendre(200) -> false
+new MachineACafe(1,2,2).peutRendre(10) -> true
+new MachineACafe(1,2,2).peutRendre(80) -> true
+new MachineACafe(1,2,2).peutRendre(90) -> true
+new MachineACafe(0,2,5).peutRendre(80) -> false
+new MachineACafe(1,1,1).peutRendre(55) -> false
+```
 
 #Série 3
 Aux échecs, le plateau standard est de taille 8x8 et une dame peut se déplacer (et capturer) n'importe quelle pièce présente sur une même une ligne, colonne, ou diagonale. 
