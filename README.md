@@ -66,7 +66,7 @@ Le but est de prendre un texte et de la convertir soit :
 - En cas d'égalité, on ne convertira rien !  
 * "Toto" -> "toto"
 * "TITi" -> "TITI"
-* "taTA" -> "tata"
+* "taTA" -> "taTA"
 
 ## Exercice 8
 Soit un tableau d'entiers relatifs. Trouvez le maximum de la multiplication de deux entiers adjacents.
