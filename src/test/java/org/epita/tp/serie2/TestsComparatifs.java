@@ -8,7 +8,7 @@ public class TestsComparatifs {
 
     @Test
     public void test_exercice2_5(){
-
+        //Comparer le temps d'exécution des deux algorithmes
     }
 
 }

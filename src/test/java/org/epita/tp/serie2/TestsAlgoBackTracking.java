@@ -8,64 +8,43 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TestsAlgoBackTracking {
 
     @Test
-    public void test_exercice1_1(){
-
+    public void test_exercice2_1_1(){
+        //Copie
     }
 
     @Test
-    public void test_exercice1_2(){
-
+    public void test_exercice2_1_2(){
+        //Représentation visuelle
     }
 
     @Test
-    public void test_exercice1_3(){
-        boolean[][] plateau =
-                {
-                        {true, false, true, false},
-                        {false, true, false, false},
-                        {false, false, false, false},
-                        {false, false, false, true},
-                };
+    public void test_exercice2_2_1(){
+        //Vérification ligne
     }
 
     @Test
-    public void test_exercice1_4(){
-
+    public void test_exercice2_2_2(){
+        //Vérification colonne
     }
 
     @Test
-    public void test_exercice1_5(){
-
+    public void test_exercice2_2_3(){
+        //Vérification diagonale gauche
     }
 
     @Test
-    public void test_exercice1_6(){
-
+    public void test_exercice2_2_4(){
+        //Vérification diagonale droite
     }
 
     @Test
-    public void test_exercice1_7(){
-
+    public void test_exercice2_3(){
+        //Est une solution
     }
 
     @Test
-    public void test_exercice1_8(){
-
-    }
-
-    @Test
-    public void test_exercice1_9(){
-
-    }
-
-    @Test
-    public void test_exercice1_10(){
-
-    }
-
-    @Test
-    @Disabled("Pas de tests ici, juste des optimisation qui ne devraient pas faire tomber en erreur les tests précédents")
-    public void test_exercice1_11(){
+    public void test_exercice2_4(){
+        //ListerSolutions
     }
 
 }
