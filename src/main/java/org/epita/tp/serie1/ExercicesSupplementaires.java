@@ -26,8 +26,8 @@ public class ExercicesSupplementaires {
         return "";
     }
 
-    public static long exercice7(String texteMinEtMaj){
-        return 0;
+    public static String exercice7(String texteMinEtMaj){
+        return "";
     }
 
     public static long exercice8(int[] entiers){
