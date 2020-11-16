@@ -2,47 +2,47 @@ package org.epita.tp.serie1;
 
 public class ExercicesSupplementaires {
 
-    public long exercice1(long...entiers){
+    public static long exercice1(long...entiers){
         return 0;
     }
 
-    public int exercice2(float[] entiers) throws IllegalArgumentException{
+    public static int exercice2(float[] entiers) throws IllegalArgumentException{
         return 0;
     }
 
-    public int exercice3(long[] entiers){
+    public static int exercice3(long[] entiers){
         return 0;
     }
 
-    public long exercice4(long[] entiers){
+    public static long exercice4(long[] entiers){
         return 0;
     }
 
-    public boolean exercice5(int age, int pysique, long revenusAnnuels){
+    public static boolean exercice5(int age, int pysique, long revenusAnnuels){
         return true;
     }
 
-    public String exercice6(String numeroClair){
+    public static String exercice6(String numeroClair){
         return "";
     }
 
-    public long exercice7(String texteMinEtMaj){
+    public static long exercice7(String texteMinEtMaj){
         return 0;
     }
 
-    public long exercice8(int[] entiers){
+    public static long exercice8(int[] entiers){
         return 0;
     }
 
-    public long exercice9(int[] entiersPositifs){
+    public static long exercice9(int[] entiersPositifs){
         return 0;
     }
 
-    public long exercice10(String nombre){
+    public static long exercice10(String nombre){
         return 0;
     }
 
-    public boolean exercice11(int pieces10ct, int pieces20ct, int pieces50ct, int totalARendre){
+    public static boolean exercice11(int pieces10ct, int pieces20ct, int pieces50ct, int totalARendre){
         return false;
     }
 
