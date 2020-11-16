@@ -24,20 +24,4 @@ public class AlgoBackTracking {
         return true;
     }
 
-    public boolean verifierColonne(int colonne) {
-        return true;
-    }
-
-    public boolean verifierLigne(int ligne) {
-        return true;
-    }
-
-    public boolean verifierDiagonaleDroite(int diagonaleDroite) {
-        return true;
-    }
-
-    public boolean verifierDiagonaleGauche(int diagonaleGauche) {
-        return true;
-    }
-
 }

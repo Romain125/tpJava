@@ -375,27 +375,28 @@ De la même manière que l'exercice précédent, commencez par écrire les méth
 * D'avoir une représentation visuelle de cet ensemble
 
 ### Exercice 2.2
-Ecrire des méthodes pour vérifier que deux dames ne sont pas :
+Ecrire des méthodes pour vérifier qu'une dame n'est pas :
 * Sur la même ligne
 ```
-verifierLigne( Dame(0,1), Dame(0,2) ) -> false
-verifierLigne( Dame(4,1), Dame(0,2) ) -> true
+Dame(0,1), Dame(0,2) -> false
+Dame(4,1), Dame(0,2) -> true
 ```
 * Sur la même colonne
 ```
-verifierColonne( Dame(0,1), Dame(0,2) ) -> true
-verifierColonne( Dame(4,2), Dame(0,2) ) -> false
+Dame(0,1), Dame(0,2) -> true
+Dame(4,2), Dame(0,2) -> false
 ```
 * Sur la même diagonale gauche
 ```
-verifierDiagonaleGauche( Dame(0,3), Dame(1,2) ) -> false
-verifierDiagonaleGauche( Dame(0,0), Dame(1,1) ) -> true
+Dame(0,3), Dame(1,2) -> false
+Dame(0,0), Dame(1,1) -> true
 ```
 * Sur la même diagonale droite
 ```
-verifierDiagonaleGauche( Dame(0,3), Dame(1,2) ) -> true
-verifierDiagonaleGauche( Dame(0,0), Dame(1,1) ) -> false
+Dame(0,3), Dame(1,2) -> true
+Dame(0,0), Dame(1,1) -> false
 ```
+* Tout à la fois
 
 ### Exercice 2.3
 Ecrire un algorithme qui compare toutes les dames d'une collection entre elles. La comparaison est un regroupement des 4 vérifications du sous-exercice 2.2.
