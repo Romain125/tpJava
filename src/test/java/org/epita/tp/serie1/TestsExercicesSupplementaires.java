@@ -40,5 +40,25 @@ public class TestsExercicesSupplementaires {
     public void exercice7(){
 
     }
+
+    @Test
+    public void exercice8(){
+
+    }
+
+    @Test
+    public void exercice9(){
+
+    }
+
+    @Test
+    public void exercice10(){
+
+    }
+
+    @Test
+    public void exercice11(){
+
+    }
     
 }

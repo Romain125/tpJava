@@ -117,16 +117,20 @@ Votre but est de trouver le plus grand chiffre possible après avoir inséré K 
 ```
 
 ## Exercice 11
-Le but ici est de modéliser le rendu-monnaie d'une machine à café. Une machine possède trois attributs à sa création : Un nombre de pièces de 10ct, un nombre de pièces de 20ct, et un nombre de pièces de 50ct.  
+Le but ici est de savoir s'il est possible de rendre la monnaie sur une somme donnée. Pour cela, nous avons 4 paramètres : 
+* Un nombre de pièces de 10ct
+* Un nombre de pièces de 20ct
+* Un nombre de pièces de 50ct
+* La somme sur laquelle nous devons rendre la monnaie  
 On cherche simplement à savoir si le rendu est possible. Il n'est pas nécessaire de trouver le rendu optimal. 
 ```
-new MachineACafe(0,0,0).peutRendre(50) -> false
-new MachineACafe(2,2,2).peutRendre(200) -> false
-new MachineACafe(1,2,2).peutRendre(10) -> true
-new MachineACafe(1,2,2).peutRendre(80) -> true
-new MachineACafe(1,2,2).peutRendre(90) -> true
-new MachineACafe(0,2,5).peutRendre(80) -> false
-new MachineACafe(1,1,1).peutRendre(55) -> false
+peutRendre(0,0,0,50) -> false
+peutRendre(2,2,2,200) -> false
+peutRendre(1,2,2,10) -> true
+peutRendre(1,2,2,80) -> true
+peutRendre(1,2,2,90) -> true
+peutRendre(0,2,5,80) -> false
+peutRendre(1,1,1,55) -> false
 ```
 
 ***

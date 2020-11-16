@@ -30,6 +30,21 @@ public class ExercicesSupplementaires {
         return 0;
     }
 
+    public long exercice8(int[] entiers){
+        return 0;
+    }
+
+    public long exercice9(int[] entiersPositifs){
+        return 0;
+    }
+
+    public long exercice10(String nombre){
+        return 0;
+    }
+
+    public boolean exercice11(int pieces10ct, int pieces20ct, int pieces50ct, int totalARendre){
+        return false;
+    }
 
 
 }
