@@ -6,7 +6,7 @@ public class ExercicesSupplementaires {
         return 0;
     }
 
-    public static int exercice2(float[] entiers) throws IllegalArgumentException{
+    public static int exercice2(float[] decimaux) throws IllegalArgumentException{
         return 0;
     }
 
