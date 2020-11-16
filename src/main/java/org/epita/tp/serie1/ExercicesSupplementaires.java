@@ -3,15 +3,47 @@ package org.epita.tp.serie1;
 public class ExercicesSupplementaires {
 
     public static long exercice1(long...entiers){
-        return 0;
+        if(entiers.length == 0){
+            return -1;
+        }
+
+        long somme = 0;
+        for (long entier : entiers) {
+            somme += entier*entier;
+        }
+        return somme;
     }
 
+
     public static int exercice2(float[] decimaux) throws IllegalArgumentException{
-        return 0;
+        if(decimaux.length == 0){
+            throw new IllegalArgumentException("Il n'est pas possible de faire la moyenne d'un tableau vide");
+        }
+
+        float somme = 0;
+        for (float decimal : decimaux) {
+            somme+=decimal;
+        }
+        return (int)(somme/ decimaux.length);
     }
 
     public static int exercice3(long[] entiers){
-        return 0;
+        long eloignementMax = 0;
+        boolean eloignementMaxIsPositive = true;
+        int indexMax = 0;
+
+        for (int i = 0; i < entiers.length; i++) {
+
+            long valeurAbsolue = Math.abs(entiers[i]);
+
+            if(valeurAbsolue > eloignementMax ||
+                    (valeurAbsolue == eloignementMax && !eloignementMaxIsPositive) ){
+                eloignementMax = valeurAbsolue;
+                eloignementMaxIsPositive = (entiers[i]>=0);
+                indexMax = i;
+            }
+        }
+        return indexMax;
     }
 
     public static long exercice4(long[] entiers){
