@@ -25,15 +25,15 @@ public class AlgoNaif {
         return;
     }
 
-    private boolean estUneSolution() {
+    public boolean estUneSolution() {
         return true;
     }
 
-    private boolean verifierColonne(int colonne) {
+    public boolean verifierColonne(int colonne) {
         return true;
     }
 
-    private boolean verifierLigne(int ligne) {
+    public boolean verifierLigne(int ligne) {
         return true;
     }
 
