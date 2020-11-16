@@ -14,7 +14,7 @@ public class ExercicesSupplementaires {
         return 0;
     }
 
-    public static long exercice4(long[] entiers){
+    public static long exercice4(int n){
         return 0;
     }
 
