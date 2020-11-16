@@ -38,7 +38,7 @@ public class ExercicesSupplementaires {
         return 0;
     }
 
-    public static long exercice10(String nombre){
+    public static long exercice10(String nombre, int nombreVirgules){
         return 0;
     }
 
