@@ -7,7 +7,7 @@
 ***
 # Série 1 - Exercices supplémentaires
 ## Exercice 1
-Soit un tableau d'entiers, retourner la somme des carrés de ces entiers :
+Soit un nombre indéfini d'entiers, retourner la somme des carrés de ces entiers :
 ```
 [1,2,3] = 1²+2²+3² = 14
 [14,9,-9,1,4,3] -> 384

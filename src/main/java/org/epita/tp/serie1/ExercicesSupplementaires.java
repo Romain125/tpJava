@@ -2,7 +2,7 @@ package org.epita.tp.serie1;
 
 public class ExercicesSupplementaires {
 
-    public long exercice1(long[] entiers){
+    public long exercice1(long...entiers){
         return 0;
     }
 
