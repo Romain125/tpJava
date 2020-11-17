@@ -1,23 +1,24 @@
 package org.epita.tp.serie3;
 
-import thegame.exceptions.NotAValidPlayException;
-import thegame.exceptions.NotAValidStackException;
-import thegame.exceptions.UnavailableCardException;
+
+import org.epita.tp.serie3.exceptions.NotAValidPlayException;
+import org.epita.tp.serie3.exceptions.NotAValidStackException;
+import org.epita.tp.serie3.exceptions.UnavailableCardException;
 
 import java.util.Scanner;
 
 public class Game {
 
-    private final thegame.Deck deck;
-    private final thegame.Table table;
-    private final thegame.Player player;
+    private final Deck deck;
+    private final Table table;
+    private final Player player;
 
     private final static int MAX_HAND_SIZE = 8;
     private boolean isLost = false;
 
     public Game() {
-        this.deck = new thegame.Deck();
-        this.table = new thegame.Table();
+        this.deck = new Deck();
+        this.table = new Table();
         player = createPlayer();
         replenishHand();
     }
@@ -50,8 +51,8 @@ public class Game {
     }
 
     private boolean playerCanPlay() {
-        for (thegame.Card card : player.getHand()) {
-            for (thegame.Stack stack : table.getStacks()) {
+        for (Card card : player.getHand()) {
+            for (Stack stack : table.getStacks()) {
                 if(stack.isAValidPlay(card)){
                     return true;
                 }
@@ -67,7 +68,7 @@ public class Game {
             int cardValue = askForCard();
             int stackNumber = askForStack();
             try {
-                thegame.Card card = player.getCardFromNumber(cardValue);
+                Card card = player.getCardFromNumber(cardValue);
                 player.discard(card);
                 table.playCard(stackNumber, card);
                 validPlay = true;
@@ -108,7 +109,7 @@ public class Game {
 
     private void giveCardToPlayer() {
         if(deck.hasARemainingCard()) {
-            thegame.Card card = deck.draw();
+            Card card = deck.draw();
             player.receiveCard(card);
         }
     }
@@ -148,10 +149,10 @@ public class Game {
         return sc.next();
     }
 
-    private thegame.Player createPlayer() {
+    private Player createPlayer() {
         System.out.println("Please enter your name : ");
         String playerName = stringInput();
-        return new thegame.Player(playerName);
+        return new Player(playerName);
     }
 
     private boolean gameFinished() {

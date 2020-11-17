@@ -1,6 +1,6 @@
 package org.epita.tp.serie3;
 
-import thegame.exceptions.NotAValidPlayException;
+import org.epita.tp.serie3.exceptions.NotAValidPlayException;
 
 public class Stack {
 
